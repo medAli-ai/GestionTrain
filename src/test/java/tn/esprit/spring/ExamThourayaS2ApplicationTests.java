@@ -20,6 +20,7 @@ import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.boot.test.context.SpringBootTest;
 import tn.esprit.spring.entities.Voyageur;
+import tn.esprit.spring.entities.Voyage;
 import tn.esprit.spring.repository.VoyageurRepository;
 import tn.esprit.spring.services.VoyageurServiceImpl;
 
@@ -36,8 +37,9 @@ class ExamThourayaS2ApplicationTests {
 
 	@Test
 	void contextLoads() {
-    
-    		Voyageur voyageur = new Voyageur(123,"Dali", null);
+		
+    		List<Voyage> list = new ArrayList<>();
+    		Voyageur voyageur = new Voyageur(1L,"Dali", list);
 		voyageur.setIdVoyageur(1L);
 		
 		
