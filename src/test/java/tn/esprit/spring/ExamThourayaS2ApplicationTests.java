@@ -56,6 +56,7 @@ class ExamThourayaS2ApplicationTests {
 	@Test
 	public void TestDeleteVoyageur() {
 		
+		List<Voyage> list = new ArrayList<>();
 		Voyageur voyageur2 = new Voyageur(2L,"bouchhioua", list);
 		voyageur2.setIdVoyageur(2L);
 		
