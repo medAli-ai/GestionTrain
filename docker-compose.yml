@@ -11,6 +11,7 @@ services:
       - MYSQL_DATABASE=tpachato
     volumes:
       - mysql-data:/var/local/mysql/data
+      - db:/var/lib/mysql
     ports:
       - 3306:3306
       
@@ -27,3 +28,7 @@ services:
       - .m2:/home/.m2
     stdin_open: true
     tty: true
+    
+volumes:
+  db:
+  mysql-data:
