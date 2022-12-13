@@ -19,8 +19,16 @@ import tn.esprit.spring.entities.Voyage;
 import tn.esprit.spring.repository.VoyageurRepository;
 import tn.esprit.spring.services.VoyageurServiceImpl;
 
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.junit.jupiter.MockitoExtension;
+
 
 @SpringBootTest
+@ExtendWith(MockitoExtension.class)
 class ExamThourayaS2ApplicationTests {
   
   @Mock
@@ -35,6 +43,7 @@ class ExamThourayaS2ApplicationTests {
     		List<Voyage> list = new ArrayList<>();
     		Voyageur voyageur = new Voyageur(1L,"Dali", list);
 		voyageur.setIdVoyageur(1L);
+		Assertions.assertNotNull(voyageur);
 		
 		
 		Mockito.when(voyageurRepository.findById(1L)).thenReturn(Optional.of(voyageur));
