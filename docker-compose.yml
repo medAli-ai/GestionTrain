@@ -7,8 +7,8 @@ services:
     command: mysqld --default-authentication-plugin=mysql_native_password
     hostname: mysql
     environment:
-      - MYSQL_ROOT_PASSWORD=root
-      - MYSQL_DATABASE=achatdb
+      - MYSQL_ROOT_PASSWORD=
+      - MYSQL_DATABASE=tpachato
     volumes:
       - mysql-data:/var/local/mysql/data
     ports:
