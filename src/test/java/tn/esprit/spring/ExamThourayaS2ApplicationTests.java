@@ -52,21 +52,4 @@ class ExamThourayaS2ApplicationTests {
 		System.out.println(voyageur);
 		System.out.println("Test 1 : ID retrival - work !");
 	}
-	
-	@Test
-	public void TestDeleteVoyageur() {
-		
-		List<Voyage> list = new ArrayList<>();
-		Voyageur voyageur2 = new Voyageur(2L,"bouchhioua", list);
-		voyageur2.setIdVoyageur(2L);
-		
-		Mockito.lenient().when(voyageurRepository.findById(voyageur2.getIdVoyageur())).thenReturn(Optional.of(voyageur2));
-		
-		System.out.println(voyageur2); 
-		verify(voyageurRepository).deleteById(2L);
-		
-		System.out.println("Test 2 : Delete specific voyageur instance - work !");  
-		
-	}
-
 }
