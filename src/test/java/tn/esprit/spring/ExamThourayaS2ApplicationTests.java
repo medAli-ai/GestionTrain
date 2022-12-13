@@ -38,7 +38,7 @@ class ExamThourayaS2ApplicationTests {
 	void contextLoads() {
     
     		Voyageur voyageur = new Voyageur(1L,"123","Dali Bouchhioua");
-		secteur.setIdVoyageur(1L);
+		voyageur.setIdVoyageur(1L);
 		
 		
 		Mockito.when(voyageurRepository.findById(1L)).thenReturn(Optional.of(voyageur));
