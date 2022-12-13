@@ -63,7 +63,7 @@ class ExamThourayaS2ApplicationTests {
 		Mockito.lenient().when(voyageurRepository.findById(voyageur2.getIdVoyageur())).thenReturn(Optional.of(voyageur2));
 		
 		System.out.println(voyageur2); 
-		verify(voyageurRepository).deleteById(voyageur2);
+		verify(voyageurRepository).deleteById(2L);
 		
 		System.out.println("Test 2 : Delete specific voyageur instance - work !");  
 		
