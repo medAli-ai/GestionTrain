@@ -37,7 +37,7 @@ class ExamThourayaS2ApplicationTests {
 	@Test
 	void contextLoads() {
     
-    		Voyageur voyageur = new Voyageur(1L,123,"Dali Bouchhioua");
+    		Voyageur voyageur = new Voyageur(null,123,"Dali Bouchhioua");
 		voyageur.setIdVoyageur(1L);
 		
 		
