@@ -65,7 +65,6 @@ class ExamThourayaS2ApplicationTests {
 		voyageurService.supprimerVoyageur(voyageur2);
 		verify(voyageurRepository).deleteById(voyageur2.getIdVoyageur());
 		
-		System.out.println(voyageur2);
 		System.out.println("Test 2 : Delete specific voyageur instance - work !");  
 		
 	}
