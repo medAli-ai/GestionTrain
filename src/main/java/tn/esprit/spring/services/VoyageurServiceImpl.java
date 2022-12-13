@@ -43,8 +43,8 @@ public class VoyageurServiceImpl implements IVoyageurService{
 	}
 
 	@Override
-	public void supprimerVoyageur(Voyageur v) {
-		voyageurRepository.delete(v);
+	public void supprimerVoyageur(Long id) {
+		voyageurRepository.deleteById(id);
 	}
 
 }
